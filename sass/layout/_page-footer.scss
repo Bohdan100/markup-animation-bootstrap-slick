@@ -1,0 +1,62 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  background-color: #2f303a;
+
+  &--container {
+    @include desctop {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0;
+    }
+  }
+
+  &--flex {
+    @include tablet {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+
+    @include desctop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__contacts-container {
+    @include desctop {
+      margin-right: 70px;
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    margin-right: 0;
+  }
+
+  &__network-container {
+    margin-top: 60px;
+
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__network-text {
+    margin-bottom: 20px;
+
+    @include font(14px, 700, calc(16 / 14), null);
+
+    text-transform: uppercase;
+
+    color: var(--first-background-color);
+
+    @include desctop {
+      text-align: left;
+    }
+  }
+}

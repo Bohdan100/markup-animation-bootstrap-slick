@@ -1,0 +1,69 @@
+.advantages {
+  padding-top: var(--padding-mobile);
+  padding-bottom: var(--padding-mobile);
+
+  @include desctop {
+    padding-top: var(--padding-desctop);
+    padding-bottom: var(--padding-desctop);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include desctop {
+      width: calc((100% - 90px) / 4);
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 120px;
+
+    margin-bottom: 30px;
+
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--second-background-color);
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    @include font(14px, 700, calc(16 / 14), null);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include desctop {
+      text-align: left;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include font(14px, null, calc(24 / 14), null);
+
+    color: var(--second-text-color);
+  }
+}

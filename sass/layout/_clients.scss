@@ -1,0 +1,78 @@
+.clients {
+  padding-top: var(--padding-mobile);
+  padding-bottom: var(--padding-mobile);
+
+  @include desctop {
+    padding-top: var(--padding-desctop);
+    padding-bottom: var(--padding-desctop);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include font(28px, 700, calc(33 / 28), null);
+
+    text-align: center;
+
+    @include desctop {
+      margin-bottom: 50px;
+
+      @include font(36px, 700, calc(42 / 36), null);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+
+    list-style: none;
+  }
+
+  &__item {
+    width: calc((100% - 30px) / 2);
+
+    @include tablet {
+      width: calc((100% - 60px) / 3);
+    }
+
+    @include desctop {
+      width: calc((100% - 150px) / 6);
+    }
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  color: var(--third-text-color);
+
+  border: 1px solid var(--third-text-color);
+  border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--acent-color);
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--acent-color);
+  }
+}

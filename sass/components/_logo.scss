@@ -1,0 +1,16 @@
+.logo {
+  font-family: "Raleway";
+
+  @include font(26px, 700, 1.19, null);
+
+  color: var(--acent-color);
+  text-decoration: none;
+
+  &--dark-theme {
+    color: #212121;
+  }
+
+  &--light-theme {
+    color: var(--first-background-color);
+  }
+}

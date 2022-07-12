@@ -1,0 +1,54 @@
+.activity {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  @include desctop {
+    padding-bottom: var(--padding-desctop);
+
+    &__title {
+      margin-bottom: 50px;
+
+      @include font(36px, 700, calc(42 / 36), null);
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: var(--margin-right-icons);
+    }
+
+    &__container {
+      position: relative;
+    }
+
+    &__image {
+      display: block;
+    }
+
+    &__text {
+      position: absolute;
+
+      width: 100%;
+      height: 24%;
+
+      transform: translateY(-100%);
+
+      @include font(14px, 700, calc(16 / 14), null);
+
+      padding-top: 27px;
+      padding-bottom: 27px;
+      text-align: center;
+
+      text-transform: uppercase;
+      color: #ffffff;
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
+}

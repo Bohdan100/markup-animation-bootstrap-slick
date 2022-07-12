@@ -1,0 +1,36 @@
+.page-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: var(--first-background-color);
+
+  border-bottom: 1px solid #ececec;
+
+  z-index: 1;
+
+  @include tablet {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    // flex-basis: 50%;
+    // justify-content: space-between;
+
+    @include tablet {
+      justify-content: space-between;
+      flex-basis: 33.3333%;
+    }
+
+    @include desctop {
+      justify-content: start;
+    }
+  }
+}

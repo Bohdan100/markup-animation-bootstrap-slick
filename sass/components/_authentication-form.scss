@@ -1,0 +1,139 @@
+.authentication {
+  &__label {
+    display: block;
+    text-align: left;
+
+    margin-bottom: 4px;
+
+    @include font(12px, null, calc(14 / 12), 0.01em);
+
+    color: var(--second-text-color);
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 50%);
+    fill: var(--first-text-color);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  //  ------checkbox---------
+
+  &__checklabel {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    @include font(12px, null, calc(14 / 12), null);
+
+    color: var(--second-text-color);
+
+    @include desctop {
+      @include font(14px, null, calc(24 / 14), null);
+    }
+  }
+
+  &__checkbox {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--first-text-color);
+    border-radius: 3px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--first-background-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__checkicon {
+    fill: transparent;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__checklink {
+    color: var(--acent-color);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+.authentication__input {
+  display: block;
+  padding: 0 0 0 10px;
+
+  @include font(12px, null, calc(14 / 12), null);
+
+  margin-bottom: 10px;
+
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--acent-color);
+    outline: var(--acent-color);
+  }
+
+  &:focus + .authentication__icon,
+  &:not(:placeholder-shown) + .authentication__icon {
+    transform: translate(-100%, 50%);
+    fill: var(--acent-color);
+  }
+
+  &:checked + .authentication__checklabel span {
+    background-color: var(--acent-color);
+    border-color: var(--acent-color);
+  }
+
+  &:checked + .authentication__checklabel .authentication__checkicon {
+    fill: var(--first-background-color);
+  }
+}
+
+.authentication__textarea {
+  display: block;
+
+  margin-bottom: 20px;
+
+  padding: 10px 0 0 10px;
+
+  @include font(12px, null, calc(14 / 12), null);
+
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  resize: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    @include font(12px, null, calc(14 / 12), 0.01em);
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--acent-color);
+    outline: var(--acent-color);
+  }
+}
