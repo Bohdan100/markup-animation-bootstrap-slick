@@ -38,9 +38,9 @@ $(".card-set").slick({
   ],
 });
 
-//   $(".projects__btn-list").slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//   });
+$(".gallery__list-slick").slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
